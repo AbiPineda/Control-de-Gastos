@@ -9,8 +9,11 @@
         :label-msg="'Ahorro Total:'"
         :total-amount="50000"
         :amount="amount"
-        
-      />
+      >
+        <template #graphicSlot> graphic </template>
+
+        <template #actionSlot> button </template>
+      </ResumeCashVue>
     </template>
     <template #movementsSlot>
       <MovementsCashVue />
@@ -34,7 +37,7 @@ export default {
   data() {
     return {
       amount: null,
-      labelmsg:null
+      labelmsg: null,
     };
   },
 };
