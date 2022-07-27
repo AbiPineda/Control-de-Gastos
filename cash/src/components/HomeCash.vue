@@ -4,7 +4,12 @@
       <HeaderCashVue />
     </template>
     <template #resumeSlot>
-      <ResumeCashVue />
+      <ResumeCashVue
+        :label="'Ahorro total:'"
+        :total-amount="50000"
+        :amount="amount"
+        
+      />
     </template>
     <template #movementsSlot>
       <MovementsCashVue />
@@ -24,6 +29,12 @@ export default {
     HeaderCashVue,
     ResumeCashVue,
     MovementsCashVue,
+  },
+  data() {
+    return {
+      amount: null,
+      
+    };
   },
 };
 </script>
