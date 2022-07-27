@@ -16,7 +16,9 @@
       </ResumeCashVue>
     </template>
     <template #movementsSlot>
-      <MovementsCashVue />
+      <MovementsCashVue
+      :movements="movements"
+        />
     </template>
   </LayoutCashVue>
 </template>
@@ -25,7 +27,7 @@
 import LayoutCashVue from "./LayoutCash.vue";
 import HeaderCashVue from "./HeaderCash.vue";
 import ResumeCashVue from "./Resume/IndexResume.vue";
-import MovementsCashVue from "./MovementsCash.vue";
+import MovementsCashVue from "./Movements/IndexMovements.vue";
 
 export default {
   components: {
@@ -38,6 +40,38 @@ export default {
     return {
       amount: null,
       labelmsg: null,
+      movements: [
+        {
+          id: 1,
+          title: "Movimiento",
+          description: "Deposito de salario",
+          amount: "1000",
+        },
+        {
+          id: 2,
+          title: "Movimiento 1",
+          description: "Deposito de honorarios",
+          amount: "500",
+        },
+        {
+          id: 3,
+          title: "Movimiento 3",
+          description: "Comida",
+          amount: "-100",
+        },
+        {
+          id: 4,
+          title: "Movimiento 4",
+          description: "Colegiatura",
+          amount: "1000",
+        },
+        {
+          id: 5,
+          title: "Movimiento 5",
+          description: "Reparación equipo",
+          amount: "1000",
+        },
+      ],
     };
   },
 };
