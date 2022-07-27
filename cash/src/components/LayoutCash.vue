@@ -1,8 +1,26 @@
 <template>
+  <div>
     <div class="header">
-        <slot name="headerSlot"></slot>
+      <slot name="headerSlot"></slot>
     </div>
+    <div class="resume">
+      <slot name="resumeSlot"></slot>
+    </div>
+    <div class="movements">
+      <div class="head" @click="showMovements = !showMovements">
+        <div class="grip"></div>
+      </div>
+      <div class="body" v-show="showMovements">
+        <slot name="movementsSlot"></slot>
+      </div>
+    </div>
+  </div>
 </template>
+
+<script setup>
+import { ref } from "vue";
+const showMovements = ref(false);
+</script>
 
 <style scoped>
 header,
