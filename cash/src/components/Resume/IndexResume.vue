@@ -1,7 +1,7 @@
 <!-- Contenido -->
 <template>
   <main>
-    <p>{{ label }}</p>
+    <p>{{ labelVisual }}</p>
     <h1>${{ amountVisual }}</h1>
   </main>
 </template>
@@ -11,18 +11,27 @@ export default {
   props: {
     label: {
       type: String,
+      required: true,
     },
     totalAmount: {
       type: Number,
+      required: true,
     },
     amount: {
       type: Number,
       default: null
     },
+    labelMsg:{
+        type: String,
+        default: null
+    }
   },
   computed:{
     amountVisual(){
         return this.amount !== null ? this.amount : this.totalAmount;
+    },
+     labelVisual(){
+        return this.label !== null ? this.label : this.labelMsg;
     }
   }
 };

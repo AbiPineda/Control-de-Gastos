@@ -5,7 +5,8 @@
     </template>
     <template #resumeSlot>
       <ResumeCashVue
-        :label="'Ahorro total:'"
+        :label="labelmsg"
+        :label-msg="'Ahorro Total:'"
         :total-amount="50000"
         :amount="amount"
         
@@ -33,7 +34,7 @@ export default {
   data() {
     return {
       amount: null,
-      
+      labelmsg:null
     };
   },
 };
