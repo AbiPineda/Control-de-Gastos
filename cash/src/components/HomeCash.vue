@@ -12,7 +12,10 @@
       >
         <template #graphicSlot> graphic </template>
 
-        <template #actionSlot> button </template>
+        <template #actionSlot>
+          <ActionButtonCashVue/>
+        </template>
+        
       </ResumeCashVue>
     </template>
     <template #movementsSlot>
@@ -28,6 +31,7 @@ import LayoutCashVue from "./LayoutCash.vue";
 import HeaderCashVue from "./HeaderCash.vue";
 import ResumeCashVue from "./Resume/IndexResume.vue";
 import MovementsCashVue from "./Movements/IndexMovements.vue";
+import ActionButtonCashVue from "./ActionButtonCash.vue";
 
 export default {
   components: {
@@ -35,6 +39,7 @@ export default {
     HeaderCashVue,
     ResumeCashVue,
     MovementsCashVue,
+    ActionButtonCashVue,
   },
   data() {
     return {
