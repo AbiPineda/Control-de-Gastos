@@ -11,19 +11,16 @@
         :amount="amount"
       >
         <template #graphicSlot>
-          <GraphicCashVue/>
+          <GraphicCashVue :amounts="amounts" />
         </template>
 
         <template #actionSlot>
-          <ActionButtonCashVue/>
+          <ActionButtonCashVue />
         </template>
-        
       </ResumeCashVue>
     </template>
     <template #movementsSlot>
-      <MovementsCashVue
-      :movements="movements"
-        />
+      <MovementsCashVue :movements="movements" />
     </template>
   </LayoutCashVue>
 </template>
@@ -48,6 +45,7 @@ export default {
     return {
       amount: null,
       labelmsg: null,
+      amounts: [100, 200, 500, 200, -400, -600, -300, 0, 300, 500],
       movements: [
         {
           id: 1,
