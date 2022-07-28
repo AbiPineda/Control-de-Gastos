@@ -10,7 +10,9 @@
         :total-amount="50000"
         :amount="amount"
       >
-        <template #graphicSlot> graphic </template>
+        <template #graphicSlot>
+          <GraphicCashVue/>
+        </template>
 
         <template #actionSlot>
           <ActionButtonCashVue/>
@@ -32,7 +34,7 @@ import HeaderCashVue from "./HeaderCash.vue";
 import ResumeCashVue from "./Resume/IndexResume.vue";
 import MovementsCashVue from "./Movements/IndexMovements.vue";
 import ActionButtonCashVue from "./ActionButtonCash.vue";
-
+import GraphicCashVue from "./GraphicCash.vue";
 export default {
   components: {
     LayoutCashVue,
@@ -40,6 +42,7 @@ export default {
     ResumeCashVue,
     MovementsCashVue,
     ActionButtonCashVue,
+    GraphicCashVue,
   },
   data() {
     return {
